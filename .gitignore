@@ -1,7 +1,74 @@
+#----------------------------------------
+# LaTeX auxiliary & intermediate files
+#----------------------------------------
 *.aux
-*.log
-*.out
-*.synctex.gz
-*.toc
+*.bbl
+*.bcf
+*.blg
 *.fdb_latexmk
 *.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+#----------------------------------------
+# Generated PDF or other build outputs
+#----------------------------------------
+*.pdf
+*.dvi
+*.ps
+
+#----------------------------------------
+# Latexmk / Build tools
+#----------------------------------------
+latexmkrc
+*.makefile
+*.mk
+
+#----------------------------------------
+# TikZ & externalized graphics
+#----------------------------------------
+*.dpth
+*.md5
+*.auxlock
+*.dep
+*.figlist
+tikzexternal/
+
+#----------------------------------------
+# Output directories (if used)
+#----------------------------------------
+_build/
+out/
+build/
+tmp/
+temp/
+
+#----------------------------------------
+# Editors & IDEs
+#----------------------------------------
+# VS Code
+.vscode/
+
+# TexStudio / TeXShop / Overleaf artifacts
+*.synctex.gz(busy)
+*.ver
+*.sta
+
+# Emacs / Vim / other editors
+*~
+*.swp
+*.swo
+.#*
+
+# macOS / Windows junk
+.DS_Store
+Thumbs.db

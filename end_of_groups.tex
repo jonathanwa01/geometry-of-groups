@@ -61,21 +61,21 @@
 	\section{Introduction}
 	The concept of ends provides a way to capture the “large-scale” topology of spaces and groups. Informally, an end describes a direction in which a space can “go to infinity.” For topological spaces, ends can be understood as the connected components that remain when removing an ascending sequence of compact subsets. In other words, they represent the connected components of the ideal boundary of the space.
 	
-	In the setting of finitely generated groups, we associate to each group a Cayley graph, which is a locally finite, connected graph encoding the group’s algebraic structure. The ends of a finitely generated group are then defined as the ends of its Cayley graph. Since all Cayley graphs of a  finitely generated group are quasi-isometric, the number of ends is a quasi-isometry invariant, hence, an invariant of the group itself.
+	In the setting of finitely generated groups, we associate to each group a Cayley graph, which is a locally finite, connected graph encoding the group’s algebraic structure. The ends of a finitely generated group are then defined as the ends of its Cayley graph. Since all Cayley graphs of a  finitely generated group are quasi-isometric, the number of ends is a quasi-isometry invariant, hence an invariant of the group itself.
 	
 	In this talk, we will concentrate on determining the number of ends a group can have and will show that a group must have either 0, 1, 2, or infinitely many ends (Theorem \ref{thm:no_group_with_more_than_three_ends}).
 	
 	\section{Definitions and examples}
 	
 
-	\begin{definition}[Ends of topolocical spaces]
-		Let $X$ be a topological space. Consider the poset $\text{Comp}(X)$ of compact subsets of $X$ ordered by inclusion. For a compact subspae $K$ we consider the complement $X\setminus K$. Each morphism $K_1 \subset K_2$ induces a function $\Pi_0(X\setminus K_2) \to \Pi_0(X\setminus K_1)$. This yields a presheaf
+	\begin{definition}[Ends of topological spaces]
+		Let $X$ be a topological space. Consider the poset $\text{Comp}(X)$ of compact subsets of $X$ ordered by inclusion. For a compact subspace $K$ we consider the complement $X\setminus K$. Each morphism $K_1 \subset K_2$ induces a function $\Pi_0(X\setminus K_2) \to \Pi_0(X\setminus K_1)$. This yields a presheaf
 		$$F: \text{Comp}(X) \to \text{Set}$$
 		Define the set of ends $end(X) = \lim F$ to be the limit of this presheaf.
 	\end{definition}
 
 	\begin{definition}[Proper rays, 3.3.2 \cite{Guilbault2012}]\label{def:proper_ray_top}
-		Let $X$ be a topological space. The we call a continous map $\gamma: [0, \infty) \to X$ proper, if $\gamma^{-1}(C)$ is compact for all compact sets $C\subset X$.
+		Let $X$ be a topological space. The we call a continuous map $\gamma: [0, \infty) \to X$ proper, if $\gamma^{-1}(C)$ is compact for all compact sets $C\subset X$.
 	\end{definition}
 
 	\begin{remark}
@@ -83,11 +83,11 @@
 	\end{remark}
 
 	\begin{definition}[Proper rays of geodesic spaces]
-		Let $X$ be a geodesic space. A \textit{proper ray} is continous map $\gamma:[0, \infty) \to X$ such that the preimage $\gamma^{-1}(B) \subset [0, \infty)$ of all bounded sets $B\subset X$ is bounded.
+		Let $X$ be a geodesic space. A \textit{proper ray} is continuous map $\gamma:[0, \infty) \to X$ such that the preimage $\gamma^{-1}(B) \subset [0, \infty)$ of all bounded sets $B\subset X$ is bounded.
 	\end{definition}
 
 	\begin{remark}
-		This is in fact equivalent to definition \ref{def:proper_ray_top}. One direction is obvious, since compact sets in metric spaces are precisely the closed and boudend subsets. For the other direction one could see, that the closure of a bounded subset is compact.
+		This is in fact equivalent to definition \ref{def:proper_ray_top}. One direction is obvious, since compact sets in metric spaces are precisely the closed and bouded subsets. For the other direction one could see, that the closure of a bounded subset is compact.
 	\end{remark}
 
 \begin{example}
@@ -96,7 +96,7 @@
 	
 	\begin{definition}[Ends of geodesic spaces]
 		Let X be a geodesic space.
-		We define an equivalence relation of the set of rays $[0, \infty)\to X$ as follows. Let $\gamma_1, \gamma_2 : [0, \infty) \to X$ be two proper rays, then we define $\gamma_1 \sim \gamma_2$, iff for all bounded $B\subset X$ there exists a $t\geq 0$, such that $\gamma_1([t, \infty))$ and $\gamma_2([t, \infty)$ lie in the same path component of $X \setminus B$.
+		We define an equivalence relation of the set of rays $[0, \infty)\to X$ as follows. Let $\gamma_1, \gamma_2 : [0, \infty) \to X$ be two proper rays, we say that $\gamma_1 \sim \gamma_2$, iff for all bounded $B\subset X$ there exists a $t\geq 0$, such that $\gamma_1([t, \infty))$ and $\gamma_2([t, \infty)$ lie in the same path component of $X \setminus B$.
 		We write $\textit{end}(\gamma)$ for such an equivalence class.
 	\end{definition}
 
@@ -104,19 +104,19 @@
 	\begin{definition}[Space of Ends, Definition 8.2.1 \cite{Loh2017}]
 		We define the space of ends as $$\text{End}(X) = \{\textit{end}(\gamma) \mid \gamma :[0, \infty) \to X \text{ proper ray}\}.$$
 		We define the topology via convergence:\\
-		Let $(x_n)_{n\in \N} \subset \text{End}(X)$ be a sequence of ends and $x\in \text{End}(X)$, then we define $x_n \to x$ to be convergent to $x$, iff there exists representing rays $\gamma_n, \gamma$ of $x_n$ and $x$ respectively with the following property:
+		Let $(x_n)_{n\in \N} \subset \text{End}(X)$ be a sequence of ends and $x\in \text{End}(X)$, we say that $x_n \to x$ to be convergent to $x$, iff there exists representing rays $\gamma_n, \gamma$ of $x_n$ and $x$ respectively with the following property:
 		For all bounded sets $B\subset X$ there exists an $N_0 \in \N$ and $t_n \geq 0$ for all $n\geq N_0$ such that $\gamma_n([t_n, \infty)$ and $\gamma([t_n, \infty))$ lie in the same path component of $X\setminus B$.
 		Then a subset $A\subset \text{End}(X)$ is closed, if every the limit $x\in \text{End}(X)$ of every converging sequence $(x_n)_{n\in \N} \subset A$ is contained in $A$.
 		\end{definition}
 
 	
 	\begin{example}
-		Consider $X= \R \times \{0\} \cup \{0\}\times \R$. This space has four ends, represented by the rays $t\mapsto (0, t), t\mapsto (0, -t), t\mapsto(0, t), t\mapsto (t, 0)$.
+		Consider $X= \R \times \{0\} \cup \{0\}\times \R$. This space has four ends, represented by the rays $t\mapsto (0, t), t\mapsto (0, -t), t\mapsto(t, 0), t\mapsto (-t, 0)$.
 	\end{example}
 
 	\begin{example}
 		The space $F_2$ has infinitely many ends. By lemma \ref{lemma_ends_geodesic_spaces}, they are all represented by geodesic rays starting at the origin. Since $F_2$ is the Cayley graph of a free group, i.e. a proper geodesic space, every end is represented by a proper geodesic ray. Such a proper geodesic ray is exactly a sequence of generators without backtracking and hence corresponds to an infinite reduced word.\\
-		Fun fact: The set of is uncountable and isomorphic to the Cantor set, see \cite[Sec.~8, p.~236]{Diestel}.
+		Fun fact: The set of ends is uncountable and isomorphic to the Cantor set, see \cite[Sec.~8, p.~236]{Diestel}.
 	\end{example}
 
 	\begin{figure}
@@ -135,14 +135,14 @@
 
 	\begin{definition}[Ends of quasi-geodesic spaces, Definition 8.2.5 \cite{Loh2017}]
 			Given two proper $(c, b)$ quasi rays $\gamma_1, \gamma_2: [0, \infty) \to X$. We define the equivalence relation $\gamma_1 \sim \gamma_2$, iff there exists a $t\geq 0$, such that $\gamma_1([t, \infty))$ and $\gamma_2([t, \infty)$ lie in the same $(c, b)$ quasi path component of $X \setminus B$.\\
-			We write $\textit{end}_Q(\gamma)$ for the quivalence class of all proper $(c, b)$ quasi rays representing the same quasi end and for the \textit{space of quasi ends} we write 
+			We write $\textit{end}_Q(\gamma)$ for the equivalence class of all proper $(c, b)$ quasi rays representing the same quasi end and for the \textit{space of quasi ends} we write 
 			$$\text{End}_Q(X) := \{\textit{end}_Q(\gamma) \mid \gamma: [0, \infty) \to X \text{ proper (c, b) quasi ray}\}.$$
 			We define the topology on $\text{End}_Q(X)$ via convergence as before by replacing path components by $(c, b)$ quasi path components. 
 	\end{definition}
 
 
 	\begin{proposition}[Quasi-isometry invariance of ends, Prop. 8.2.8, \cite{Loh2017}]
-		Let $X, Y$ be quasi geodesic metric spaces, then every quasi isometric embedding $f:X\to Y$ induces a continous map 
+		Let $X, Y$ be quasi geodesic metric spaces, then every quasi isometric embedding $f:X\to Y$ induces a continuous map 
 		\begin{align*}
 			\text{End}_Q(f): \text{End}_Q(X) \to \text{End}_Q(Y) \\
 			\text{end}(\gamma) \mapsto 	\text{end}(f\circ \gamma),
@@ -151,7 +151,7 @@
 	\end{proposition}
 
 	\begin{lemma}[Ends of geodesic spaces, Prop 8.2.7, \cite{Loh2017}]\label{lemma_ends_geodesic_spaces}
-		Let $X$ be a geodesic metric space and $x\in X$. If $X$ is proper, then every end can be represented by a geodesic ray staring in $x$.
+		Let $X$ be a geodesic metric space and $x\in X$. If $X$ is proper, then every end can be represented by a geodesic ray starting in $x$.
 	\end{lemma}
 
 	\begin{proof}
@@ -159,35 +159,41 @@
 		Ascoli theorem we can find a subsequence $\gamma_{n_k}$ that converges to a geodesic ray starting at $x$.
 	\end{proof}
 
+	\begin{lemma}[Prop. 8.2.7 \cite{Loh2017}]
+		The inclusion $ \textbf{Met}\subset \textbf{QMet}$ of the full subcategory of geodesic metric spaces induces a homeomorphism $\text{End}(X) \cong \text{End}_Q(X)$.
+	\end{lemma}
+
 	\begin{definition}[Ends of groups, Definition 8.2.9 \cite{Loh2017}]
 		Let $G$ be a finitely generated group. Then we define $\text{End}(G) := \text{End}(\Gamma(G, S))$ for some generating set $S\subset G$.
 	\end{definition}
+
+	\begin{remark}
+		We have seen, that different generating sets of the same group induce quasi isometric Cayley graphs, i.e. isomorphisms in \textbf{QMet}. Hence, by functoriality this is welldefined.
+	\end{remark}
 
 	\begin{example}
 		Consider the group $\Z^2$. It is easy to see, that the Cayley graph of $\Z^2$ is quasi isometric to $\R^2$. Since ends are invariant under quasi-isometry, it suffices to compute the ends of $\R^2$.
 		Now any proper ray $\gamma$ in $\R^2$ represents the same end: 
 		
-		Let $\gamma'$ be a different proper ray. Let $B\subset X$ by any bounded set. Then $X\setminus B$ is connected. Since $\gamma, \gamma'$ are proper, there exist a $t, t'$, such that $\gamma[t, \infty)\subset X\setminus B$, and $\gamma'[t', \infty)\subset X\setminus B$. Now take $t'' = max(t, t')$.
+		Let $\gamma'$ be a different proper ray. Let $B\subset X$ be any bounded set. Then $X\setminus B$ is connected. Since $\gamma, \gamma'$ are proper, there exist a $t, t'$, such that $\gamma[t, \infty)\subset X\setminus B$, and $\gamma'[t', \infty)\subset X\setminus B$. Now $t'' = max(t, t')$ shows $\gamma \sim \gamma'$.
 		
-		Geometrically The end space of $\Z^2$ is the one-point compactification of $\R^2$.
+		From a geometric perspective, the end space of $\Z^2$ realizes the one-point compactification of $\R^2$. Indeed compactifying $\R^2$ by its end yields precisely the one-point compactification.
 	\end{example}
-	
-	\begin{remark}
-		We have seen, that different generating sets of the same group induce quasi isometric Cayley graphs, i.e. isomorphisms in \textbf{QMet}. Hence, by funtoriality this is welldefined.
-	\end{remark}
+
+
 
 	\begin{proposition}\label{prop_fin_index_subgroup}
-		Let $G$ be a finitely geenrated group with finitely many ends. $\text{End}(G)$ inherits a $G$-action by functoriality and $G$ contains a finite index subgroup $H$, such that the restriction to $H$ acts trivial on $\text{End}(G)$.\\
-		Moreover $H$ acts trivial on $\text{End}(H)$ and $\text{End}(H) \cong \text{End}(G)$.
+		Let $G$ be a finitely generated group with finitely many ends. $\text{End}(G)$ inherits a $G$-action by functoriality and $G$ contains a finite index subgroup $H$, such that the restriction to $H$ acts trivially on $\text{End}(G)$.\\
+		Moreover $H$ acts trivially on $\text{End}(H)$ and $\text{End}(H) \cong \text{End}(G)$.
 	\end{proposition}
 
 	\begin{proof}
 		Let $S$ be a finite generating set of $G$. Then $G$ acts on $\Gamma(G, S)$ via	$g.v := g\cdot v$ for a vertex $v\in G$. Now given a ray $\gamma$ in $\Gamma(G, S)$, the group action induces group action via $(g.\gamma)(t) := g\cdot \gamma(t)$. By continuity, this induces a well defined action on $\text{End}(G)$ via $g.[\gamma] := [g\cdot \gamma]$.\\
 		The group action induces a morphism of groups
 		$$\varphi: G\to \text{Aut}(\text{End}(G)).$$
-		Since $G$ is finitely generated, so is the image. By $G/ \ker\varphi \cong \text{im}\varphi$, $H := \ker\varphi$ is of finite index. By definition $\varphi\mid_{\ker\varphi}$ acts trivial on $\text{End}(H)$.\\
+		Since $G$ is finitely generated, so is the image. By $G/ \ker\varphi \cong \text{im}\varphi$, $H := \ker\varphi$ is of finite index. By definition $\varphi\mid_{\ker\varphi}$ acts trivially on $\text{End}(H)$.\\
 		Chose generating sets $T\subset S$, such that $H = \langle T\rangle$ and $G=\langle S\rangle$. The inclusion $H \subset G$ induces a quasi isometry $\Gamma(H, T) \cong \Gamma(G, S)$, since every $g\in G$ lies within a uniformly bounded distance of some $h\in H$ (Can be chosen uniformly and it depends only on the index of $H$).
-		Hence, we obtain an isomorphism $\text{End}(H) \cong \text{End}(G)$ and $H$ acts trivial on $\text{End}(H)$ via this isomorphism.
+		Hence, we obtain an isomorphism $\text{End}(H) \cong \text{End}(G)$ and $H$ acts trivially on $\text{End}(H)$ via this isomorphism.
 	\end{proof}
 
 	\begin{theorem}[Possible numbers of ends of groups, Theorem 8.2.11, \cite{Loh2017}]\label{thm:no_group_with_more_than_three_ends}
@@ -204,8 +210,8 @@
 
 	\begin{proof}
 		Assume $G$ has at least three ends.
-		By functoriality of $\text{End}$, the space $\text{End}(G)$ inherits a $G$-action and by proposition \ref{prop_fin_index_subgroup} we may without loss of generality assume that the group acts trivial. Let $S$ be a generating set of $G$, $X := \Gamma(G, S)$  and let $\gamma_0, \gamma_1, \gamma_2: [0, \infty) \to X$ be three proper rays representing three different ends. By lemma \ref{lemma_ends_geodesic_spaces} we may assume $\gamma_i$ to be geodesic starting in $e$. Let $r\in \R_{>0}$, such that $\gamma_i(r, \infty)$ lie in three different path components of $X\setminus B_r(e)$. Since $X$ is geodesic, $d(\gamma_1(t), \gamma_2(t')) > 2r$ for all $t, t' > 2r$.\\
-		Define $g_k := \gamma_0(k)$ for $k\in \N$. Then $g_k$ acts on theses rays and since the $G$ action is trivial on $\text{End}(G)$, the rays $g_k.\gamma_i$ and $\gamma_i$ represent the same ends. Let $n > 3\cdot r$, then $g_n = \gamma_0(n) \in \gamma_0(r, \infty)$ lies in a different path component of $X\setminus B_r(e)$ than $\gamma_1(r, \infty)$ and $\gamma_2(r, \infty)$. But because $g_n\cdot\gamma_i$ and $\gamma_i$ represent the same end, $g_n\cdot\gamma_i$ has to pass through $B_r(e)$ for $i=1, 2$:
+		By functoriality of $\text{End}$, the space $\text{End}(G)$ inherits a $G$-action and by proposition \ref{prop_fin_index_subgroup} we may without loss of generality assume that the group acts trivially. Let $S$ be a generating set of $G$, $X := \Gamma(G, S)$  and let $\gamma_0, \gamma_1, \gamma_2: [0, \infty) \to X$ be three proper rays representing three different ends. By lemma \ref{lemma_ends_geodesic_spaces} we may assume $\gamma_i$ to be geodesic starting in $e$. Let $r\in \R_{>0}$, such that $\gamma_i(r, \infty)$ lie in three different path components of $X\setminus B_r(e)$. Since $X$ is geodesic, $d(\gamma_1(t), \gamma_2(t')) > 2r$ for all $t, t' > 2r$.\\
+		Define $g_k := \gamma_0(k)$ for $k\in \N$. Then $g_k$ acts on these rays and since the $G$ action is trivial on $\text{End}(G)$, the rays $g_k.\gamma_i$ and $\gamma_i$ represent the same ends. Let $n > 3\cdot r$, then $g_n = \gamma_0(n) \in \gamma_0(r, \infty)$ lies in a different path component of $X\setminus B_r(e)$ than $\gamma_1(r, \infty)$ and $\gamma_2(r, \infty)$. But because $g_n\cdot\gamma_i$ and $\gamma_i$ represent the same end, $g_n\cdot\gamma_i$ has to pass through $B_r(e)$ for $i=1, 2$:
 		
 		For $t=0$, $g_n\cdot\gamma_i(0) = g_n = \gamma_0(n) \in X\setminus B_r(e)$ lies in the path component of representing the end $[\gamma_0]$. So for $g_n\cdot\gamma_i$ to be in the same component of of $\gamma_i$, it has to pass through $B_r(e)$.
 		
@@ -250,7 +256,7 @@
 	\end{remark}
 	
 	\begin{remark}[Theorem 13.5.5, \cite{Geoghegan2008}]
-		There is a very nice classification for ends of groups using group cohomology with coefficents in $\mathbb{F}_2G$, the group ring with coeficients in $\mathbb{F}_2$:
+		There is a very nice classification for ends of groups using group cohomology with coefficients  $\mathbb{F}_2G$, the group ring with coefficients in $\mathbb{F}_2$:
 		\[
 		\mid\text{End}(G)\mid = 
 		\begin{cases}
